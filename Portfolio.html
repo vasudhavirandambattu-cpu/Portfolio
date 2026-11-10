@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: Arial,  sans-serif;
+        background: white;
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 80px;
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .logo i{
+        font-size: 28px;
+    }
+    .logo h2{
+        font-size: 35px;
+    }
+    nav a{
+        text-decoration: none;
+        color: black;
+        margin-left: 30px;
+        font-size: 18px;
+    }
+    nav a:hover{
+        color: royalblue;
+    }
+    .home{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 80px;
+    }
+    .content h3{
+        font-size: 28px;
+        color: gray;
+    }
+    .content h1{
+        font-size: 70px;
+        margin: 20px 0;
+    }
+    .content h2{
+        font-size: 40px;
+        color: gray;
+        margin-bottom: 30px;
+    }
+    .content p{
+        font-size: 22px;
+        margin: 20px 0;
+    }
+    .image{
+        width: 450px;
+        height: 600px;
+        overflow: hidden;
+        border-radius: 50% ;
+    }
+    .image img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .about{
+        padding: 100px;
+    }
+    .about h4{
+        color: royalblue;
+        font-size: 25px;
+    }
+    .about h1{
+        font-size: 55px;
+        margin-top: 30px;
+        line-height: 80px;
+    }
+    .description{
+        display: flex;
+        justify-content: space-between;
+        padding: 100px;
+    }
+    .left{
+        width: 45%;
+    }
+    .left h1{
+        color: royalblue;
+        font-size: 50px;
+    }
+    .right{
+        width: 45%;
+    }
+    .right p{
+        font-size: 22px;
+        color: gray;
+        line-height: 40px;
+    }
+    .right a{
+        text-decoration: none;
+        color: royalblue;
+        font-weight: bold;
+    }
+    .portfolio{
+    padding:80px;
+}
+
+.portfolio h1{
+    font-size:55px;
+    font-style:italic;
+    margin-bottom:40px;
+}
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.card{
+    width: 350px;
+    border:1px solid #ddd;
+    border-radius: 15px;
+   background: white;
+   overflow: hidden;
+   box-shadow: 0 4px 12px lightcyan;
+}
+
+.cards img{
+    width:100%;
+    height:280px;
+    object-fit:contain;
+    display: block;
+}
+.cards-content{
+    padding: 18px;
+}
+.cards h3{
+    font-size: 18px;
+    margin-bottom:12px ;
+}
+
+.cards p{
+    font-size: 18px;
+    color:gray;
+    line-height:30px;
+}
+
+.cards:hover{
+    transform:translateY(-10px);
+    transition:.5s;
+    box-shadow:0 0 20px lightgray;
+}
+.social{
+    text-align:right;
+    padding:40px 80px;
+}
+
+.social i{
+    font-size:35px;
+    margin-left:20px;
+    color:black;
+}
+
+.social i:hover{
+    color:royalblue;
+}
+footer{
+    margin-top:80px;
+    background:#f5f5f5;
+    padding:60px;
+}
+
+.footer{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:40px;
+}
+
+.footer h3{
+    margin-bottom:20px;
+}
+
+.footer p{
+    line-height:35px;
+    color:gray;
+}
+
+.copy{
+    text-align:center;
+    margin-top:30px;
+}
+</style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+           <i class="fa-brands fa-vaadin"></i>
+            <h2>VIRANDAMBATTU VASUDHA</h2>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Contact</a>
+        </nav>
+        </header>
+<section class="home">
+<div class="content">
+    <h3>Hello, My Name Is</h3>
+    <h1>VIRANDAMBATTU VASUDHA</h1>
+    <h2>FULLSTACK TRAINEE</h2>
+    <p>
+        <i class="fa-regular fa-envelope"></i>
+        vasudhavirandambattu@gamail.com
+    </p>
+    <p>
+        <i class="fa-solid fa-phone"></i>
+        +91 8978870112
+    </p>
+</div>
+<div class="image">
+    <img src="../myimage.png.jpeg" alt="myimage">
+</div>
+</section>
+<section class="about">
+    <h4>About Me</h4>
+    <h1>
+        I am an enthusiastic web developer based in India. with a rich experience in website and product design.
+    </h1>
+</section>
+<section class="description">
+    <div class="left">
+        <h1>
+            I design professional & beautiful websites
+        </h1>
+    </div>
+    <div class="right">
+        <p>
+            With years of experience in graphic and web design.I have mastered the skills of understanding client requirements according to the latest trends.
+        </p>
+        <a href="#">READ MORE</a>
+    </div>
+</section>
+<section class="portfolio">
+    <h1>PORTFOLIO</h1>
+    <div class="projects">
+        <div class="cards">
+            <img src="../referenceimage.png.jpeg" alt="referenceimage" >
+            <h3>HTML Reference</h3>
+            <p>The HTML Reference Page is a comprehensive website developed using HTML and CSS to provide a quick guide to HTML concepts. It includes information about HTML tags, elements, attributes, forms, tables, lists, multimedia, semantic tags, and examples.</p>
+        </div>
+         <div class="cards">
+            <img src="../ecommerceimage.png.jpeg" alt="ecommerceimage">
+            <h3>E_Commerce Website</h3>
+            <p>The E-Commerce Website is a responsive online shopping platform built using HTML, CSS, and JavaScript. It features a modern homepage, product listings, shopping cart, search functionality, and attractive product cards.</p>
+        </div>
+         <div class="cards">
+            <img src="../portfolioimage.png.jpeg" alt="portfolioimage">
+            <h3>Portfolio</h3>
+            <p>The Portfolio Website is a personal website created using HTML and CSS to showcase my skills, projects, and achievements. It includes sections such as Home, About, Services, Portfolio, and Contact.</p>
+        </div>
+         
+    </div>
+</section>
+    <section class="social">
+
+<a href="#"><i class="fa-brands fa-facebook"></i></a>
+
+<a href="#"><i class="fa-brands fa-twitter"></i></a>
+
+<a href="#"><i class="fa-brands fa-google"></i></a>
+
+<a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+<a href="#"><i class="fa-brands fa-linkedin"></i></a>
+
+<a href="#"><i class="fa-brands fa-github"></i></a>
+
+</section>
+<footer>
+
+<div class="footer">
+
+<div>
+
+<h3>VASUDHA</h3>
+
+<p>
+With years of experience as a trainee in fullstack,
+I create responsive and attractive websites.
+</p>
+
+</div>
+
+<div>
+
+<h3>STACKS</h3>
+
+<p>HTML</p>
+<p>CSS</p>
+<p>JavaScript</p>
+<p>ReactJS</p>
+
+</div>
+
+<div>
+
+<h3>PROJECT LINKS</h3>
+
+<p>HTML Reference</p>
+
+<p>E_Commerce Website</p>
+
+<p>Portfolio</p>
+
+</div>
+
+<div>
+
+<h3>CONTACT</h3>
+
+<p>Andhra Pradesh, India</p>
+
+<p>vasudhavirandambattu@gmail.com</p>
+
+<p>+91 8978870112</p>
+
+</div>
+
+</div>
+
+</footer>
